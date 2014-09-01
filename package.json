@@ -1,0 +1,35 @@
+{
+  "name": "express-session-documentdb",
+  "description": "Node.js express session store provider for Windows Azure DocumentDB",
+  "main": "./lib/express-session-documentdb.js",
+  "author": {
+    "name": "Luke Van Horn"
+  },
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukevanhorn/express-session-documentdb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lukevanhorn/express-session-documentdb/issues"
+  },
+  "dependencies": {
+    "documentdb": ">=0.9.1"
+  },
+  "keywords": [
+    "azure",
+	"documentdb",
+    "express",
+    "session"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "engine": {
+    "node": ">=0.8"
+  },
+  "homepage": "https://github.com/lukevanhorn/express-session-documentdb"
+}
