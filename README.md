@@ -21,11 +21,10 @@ Typical usage:
 	nconf = require('nconf');
 	nconf.env().file({ file: 'config.json' });
 
-	process.env.AZURE_DOCUMENTDB_HOST = process.env.AZURE_DOCUMENTDB_HOST || nconf.get('documentdb:host'); 
-	process.env.AZURE_DOCUMENTDB_AUTHKEY = process.env.AZURE_DOCUMENTDB_AUTHKEY || nconf.get('documentdb:authkey');
+	var options = { host: nconf.get('documentdb:host'), authKey: nconf.get('documentdb:authkey') };
 
 	var app = express();
 
 	app.use(cookieParser('azure ermahgerd'));
-	app.use(session({ store: new DocumentDBSessionStore({ host: process.env.AZURE_DOCUMENTDB_HOST, authKey: process.env.AZURE_DOCUMENTDB_AUTHKEY }) }));	
+	app.use(session({ store: new DocumentDBSessionStore(options) }));	
 
