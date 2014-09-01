@@ -21,7 +21,8 @@ Typical usage:
 	nconf = require('nconf');
 	nconf.env().file({ file: 'config.json' });
 
-	var options = { host: nconf.get('documentdb:host'), authKey: nconf.get('documentdb:authkey') };
+	var options = { host: nconf.get('documentdb:host'), 
+					authKey: nconf.get('documentdb:authkey') };
 
 	var app = express();
 
